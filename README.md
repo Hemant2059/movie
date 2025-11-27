@@ -1,6 +1,6 @@
 🎬 TV Series Season Viewer
 
-#author: Hemant Pandey
+Developer: Hemant Pandey
 
 A modern Next.js 14 application that displays TV show season details,
 including episodes, crew, and guest stars. Built with TypeScript,
