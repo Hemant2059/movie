@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🎬 TV Series Season Viewer
 
-## Getting Started
+#author: Hemant Pandey
 
-First, run the development server:
+A modern Next.js 14 application that displays TV show season details,
+including episodes, crew, and guest stars. Built with TypeScript,
+shadcn/ui, Next Image optimization, and clean component architecture.
 
-```bash
+🚀 Features
+
+📺 Season Overview
+
+- Poster, title, year, rating, and description
+- Responsive design with Tailwind CSS
+
+🎞️ Episode Accordion
+
+- Displays episode still, title, rating, runtime, type
+- Expandable section for detailed information
+- Crew & Guest Star listings with horizontal scroll
+
+🖼️ Optimized Image Handling
+
+- Uses next/image for automatic optimization
+- Lazy loading for fast performance
+
+🧩 Component-Based Architecture
+
+- Reusable CastCard component
+- Clean layout leveraging shadcn/ui components:
+  - Accordion
+  - Badge
+  - Card
+
+🛠️ Tech Stack
+
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- shadcn/ui components
+- TMDB-like API (custom getSeasonDetails & getImagePath)
+- ESM Modules
+
+📦 Project Structure
+
+src/ ├── app/ │ └── tv/ │ └── [id]/ │ └── season/ │ └── [seasonno]/ │
+└── page.tsx ├── components/ │ ├── cast-card.tsx │ └── ui/ ├── lib/ │
+└── data.ts ├── types/ │ └── movie.ts
+
+📥 Installation
+
+git clone cd npm install
+
+▶️ Running the Project
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+⚙️ Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+TMDB_API_KEY=your_key_here
+NEXT_PUBLIC_IMAGE_BASE_URL=https://image.tmdb.org/t/p/w500
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🔧 Utilities
 
-## Learn More
+getSeasonDetails(tvId: number, seasonNo: number) getImagePath()
 
-To learn more about Next.js, take a look at the following resources:
+📘 How It Works
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1.  Reads TV ID & season number from route params
+2.  Fetches season details
+3.  Renders header with season poster and overview
+4.  Displays all episodes inside accordion
+5.  Renders crew & guest stars when available
