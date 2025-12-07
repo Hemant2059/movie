@@ -178,9 +178,9 @@ export default async function TvShowPage({ params }: TvPageProps) {
         {/* Cast Section */}
         {credits?.cast && credits.cast.length > 0 && (
           <section>
-            <h3 className="text-2xl font-bold my-6">Crew</h3>
+            <h3 className="text-2xl font-bold my-6">Cast</h3>
             <div className="flex gap-4 overflow-x-auto">
-              {credits.crew.map((c: any, i: number) => (
+              {credits.cast.map((c: any, i: number) => (
                 <CastCard key={i} member={c} />
               ))}
             </div>

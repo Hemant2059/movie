@@ -60,7 +60,7 @@ export default async function SeasonPage({ params }: SeasonPageProps) {
             <Badge>{vote_average.toFixed(2)}</Badge>
           </h1>
           <p className="text-sm font-semibold mt-4">
-            {episodes.length} Episodes * {seasonDetails.air_date}
+            {episodes.length} Episodes ★ {seasonDetails.air_date}
           </p>
           <p className="mt-4">{overview}</p>
           <div>
