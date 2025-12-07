@@ -5,10 +5,7 @@ import Link from "next/link";
 
 const CastCard = ({ member }: { member: any }) => {
   return (
-    <Link
-      href={`/person/${member.id}`}
-      className="shrink-0 w-32 group cursor-pointer"
-    >
+    <Link href={"#"} className="shrink-0 w-32 group cursor-pointer">
       <div className="relative w-32 h-48 rounded-lg overflow-hidden mb-3 shadow-lg group-hover:shadow-primary/50 transition-shadow">
         {member.profile_path ? (
           <Image
@@ -31,8 +28,9 @@ const CastCard = ({ member }: { member: any }) => {
         )}
       </div>
       <h3 className="text-sm font-semibold truncate group-hover:text-primary transition-colors">
-        {member.name}({member.original_name})
+        {member.name}
       </h3>
+      <p className="text-xs line-clamp-2">{member.character}</p>
       <p className="text-xs line-clamp-2">{member.job}</p>
     </Link>
   );

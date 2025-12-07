@@ -62,9 +62,9 @@ export default function CarouselPlugin({ data }: HeroCarouselProps) {
                     {item.overview}
                   </p>
                   <div className="flex gap-4 pt-4">
-                    <Button size="lg" className="gap-2">
+                    {/* <Button size="lg" className="gap-2">
                       <Play className="h-5 w-5" /> Watch Trailer
-                    </Button>
+                    </Button> */}
                     <Button
                       size="lg"
                       variant="secondary"
