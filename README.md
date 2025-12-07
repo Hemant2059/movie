@@ -1,14 +1,14 @@
-🎬 TV Series Season Viewer
+🎬 Movies & TV Series Season Viewer
 
 Developer: Hemant Pandey
 
-A modern Next.js 14 application that displays TV show season details,
+A modern Next.js 16 application that displays movie & TV show season details,
 including episodes, crew, and guest stars. Built with TypeScript,
 shadcn/ui, Next Image optimization, and clean component architecture.
 
 🚀 Features
 
-📺 Season Overview
+📺 Season/Movie Overview
 
 - Poster, title, year, rating, and description
 - Responsive design with Tailwind CSS
@@ -34,22 +34,37 @@ shadcn/ui, Next Image optimization, and clean component architecture.
 
 🛠️ Tech Stack
 
-- Next.js 14 (App Router)
+- Next.js 16 (App Router)
 - TypeScript
 - Tailwind CSS
 - shadcn/ui components
-- TMDB-like API (custom getSeasonDetails & getImagePath)
+- TMDB-like API
 - ESM Modules
 
 📦 Project Structure
 
-src/ ├── app/ │ └── tv/ │ └── [id]/ │ └── season/ │ └── [seasonno]/ │
-└── page.tsx ├── components/ │ ├── cast-card.tsx │ └── ui/ ├── lib/ │
-└── data.ts ├── types/ │ └── movie.ts
+src/
+├── app/
+│ └── movie/
+│ └── [id]/
+│ └── page.tsx
+│ └── tv/
+│ └── [id]/
+│ └── season/
+│ └── [seasonno]/
+│ └── page.tsx
+├── components/
+│ ├── cast-card.tsx
+│ └── ui/
+├── lib/
+│ └── data.ts
+├── types/
+│ └── movie.ts
 
 📥 Installation
 
-git clone cd npm install
+git clone
+cd pnpm install
 
 ▶️ Running the Project
 
@@ -58,11 +73,6 @@ npm run dev
 ⚙️ Environment Variables
 
 TMDB_API_KEY=your_key_here
-NEXT_PUBLIC_IMAGE_BASE_URL=https://image.tmdb.org/t/p/w500
-
-🔧 Utilities
-
-getSeasonDetails(tvId: number, seasonNo: number) getImagePath()
 
 📘 How It Works
 
